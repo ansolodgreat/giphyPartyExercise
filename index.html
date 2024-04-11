@@ -4,25 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
-  <link rel="stylesheet"
-        href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="container">
-  <h1 class="text-center mt-4 mb-4">GIPHY PARTY</h1>
-  <form class="form-inline d-flex justify-content-center mb-4">
-    <input type="text" id="search" name="search"
-           placeholder="Enter a search term" class="form-control mr-2"/>
-    <input type="submit" class="btn btn-secondary" value="Search Giphy!"/>
-    <button id="remove" class="btn btn-danger ml-2">Remove Images</button>
+
+<canvas id="canvas"></canvas>
+<h1 class="title">GIPHY PARTY</h1>
+<h2 class="About">Search a term get a random GIPHY gif</h2>
+
+
+  <form id="gif-search-form">
+    <input type="text" id="search-input" placeholder="Search for a GIF">
+    <button type="submit">Search</button>
   </form>
-  <div id="gif-area" class="row">
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.js"></script>
-<script src="script.js"></script>
+
+  <!-- Container for displaying GIFs -->
+  <div id="gifs-container"></div>
+  <button id="remove-gifs">Remove All GIFs</button>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="script.js"></script>
+  <script src="confetti.js"></script>
+  
 </body>
 
 </html>
